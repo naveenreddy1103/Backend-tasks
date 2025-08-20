@@ -35,4 +35,9 @@ authRouter.post('/userform',async(req,res)=>{
     }
 })
 
+authRouter.get('/user',async(req,res)=>{
+    const data=await User.find()
+    res.send(data)
+})
+
 module.exports=authRouter
